@@ -30,6 +30,10 @@ public class LinkService {
         linkRepository.delete(link);
     }
 
+    public List<Link> findAllByUserId(Long userId){
+        return linkRepository.findAllByUserId(userId);
+    }
+
     public List<Link> findAll(){
         return linkRepository.findAll();
     }
