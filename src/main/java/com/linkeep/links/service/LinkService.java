@@ -1,12 +1,14 @@
 package com.linkeep.links.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.linkeep.links.entity.Link;
 import com.linkeep.links.repository.LinkRepository;
 
 import java.util.List;
+
 @Service
 public class LinkService {
 
@@ -30,8 +32,8 @@ public class LinkService {
         linkRepository.delete(link);
     }
 
-    public List<Link> findAllByUserId(Long userId){
-        return linkRepository.findAllByUserId(userId);
+    public List<Link> findAllByUserId(Long user){
+        return linkRepository.findAllByUser(user);
     }
 
     public List<Link> findAll(){

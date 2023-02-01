@@ -31,8 +31,8 @@ public class LinkController{
     }
 
     @GetMapping("findAllByUserId/{userId}")
-    public List<Link> findAllByUser(@PathVariable("userId") Long userId){
-        return linkService.findAllByUserId(userId);
+    public List<Link> findAllByUser(@PathVariable("user") Long user){
+        return linkService.findAllByUserId(user);
     }
 
     @PostMapping("save")

@@ -10,5 +10,5 @@ import com.linkeep.links.entity.Link;
 @Repository
 public interface LinkRepository extends JpaRepository<Link, Long> {
     List<Link> findByUri(String uri);
-    List<Link> findAllByUserId(Long userId);
+    List<Link> findAllByUser(Long user);
 }
