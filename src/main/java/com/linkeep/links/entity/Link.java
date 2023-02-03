@@ -13,23 +13,23 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table
+@Table(name = "links")
 public class Link{
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(name = "_user")
     @Nonnull
-    private Long user;
+    private String user;
 
-    @Column
+    @Column(name = "_uri")
     @Nonnull
     private String uri;
 
-    @Column
+    @Column(name = "_name")
     private String name;
 
-    @Column
+    @Column(name = "_icon")
     private String icon;
 }
